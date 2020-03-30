@@ -84,9 +84,10 @@ def showChangedInfo(width, height, framesCount, fps, duration, colors, size,
 
 def compressClip(clip_path):
     # Output file name and path setting.
-    separatePaths = clip_path.split('\\')
-    output_filename = separatePaths[-1].split('.')[0] + '.gif'
-    # output_path = os.path.join(os.getcwd(), 'output\\', output_filename)
+
+    file_name, file_extension = os.path.splitext(clip_path)
+    output_filename = file_name + '.gif'
+
     temp_path = os.path.join(os.getcwd(), 'output/', output_filename)
 
     clip = VideoFileClip(clip_path)
