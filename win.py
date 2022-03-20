@@ -87,7 +87,11 @@ def compressClip(clip_path):
     separatePaths = clip_path.split('\\')
     output_filename = separatePaths[-1].split('.')[0] + '.gif'
     # output_path = os.path.join(os.getcwd(), 'output\\', output_filename)
-    temp_path = os.path.join(os.getcwd(), 'output\\', output_filename)
+    output_folder = os.path.join(os.getcwd(), 'output\\')
+    temp_path = os.path.join(output_folder, output_filename)
+
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
     clip = VideoFileClip(clip_path)
 

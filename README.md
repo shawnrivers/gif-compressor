@@ -14,6 +14,7 @@ This is a little program in *Python* to help compress your `.mp4` or `.gif` into
 * `numpy`
 
 ## Usage
+Install dependencies with `pip install -r requirements.txt`
 
 For Windows users:
 
